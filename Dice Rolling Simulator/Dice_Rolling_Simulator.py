@@ -1,11 +1,11 @@
 import random
 
-again = True
 
-while again:
-    number = random.randint(1, 6)
+while True:
     print('Roll the Dice (y/n): ')
-    if again == 'y' or again == 'Y' or again == 'Yes':
+    user = input()
+    if user == 'y' or user == 'Y' or user == 'Yes' or user == 'yes':
+        number = random.randint(1, 6)
         if number == 1:
             print('''
             ┌─────────┐
@@ -64,9 +64,5 @@ while again:
             │ ●     ● │  
             └─────────┘
             ''')
-
-    # x = input("Press 'Y' to roll again and 'N' to exit:")
-    # print("\n")
-
-    # if x == 'N':
-    #     break
+    else:
+        break
